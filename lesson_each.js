@@ -8,8 +8,12 @@ _.each = function (list, callback) {
       callback(list[i], i, list);
     }
   } else {
+    //object
     // loop through object
-    // call the callback with a list item
+    for (var key in list) {
+      // call the callback with a list item
+      callback(list[key], key, list);
+    }
   }
   // celebrate
 };
