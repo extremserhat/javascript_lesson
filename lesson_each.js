@@ -1,5 +1,21 @@
 const _ = {};
 
+_.map = function (list, callback) {
+  // create an empty array to store
+  var storage = [];
+  // looping
+  for (var i = 0; i < list.length; i++) {
+    // push it to our array & callback(element)
+    storage.push(callback(list[i], i, list));
+  }
+  return storage;
+};
+
+_.map([1, 2, 3], function (val) {
+  return val + 1;
+});
+// =>[1,2,3]
+
 _.each = function (list, callback) {
   if (Array.isArray(list)) {
     // loop through array
