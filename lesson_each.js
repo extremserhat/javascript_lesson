@@ -21,3 +21,10 @@ _.each(["sally", "georie", "porgie"], function (name, i, list) {
     console.log(name, "is the oldest");
   }
 });
+
+// OUTPUT:
+/*
+sally is younger than georie;
+georie is younger than porgie
+porgie is the oldest
+*/
